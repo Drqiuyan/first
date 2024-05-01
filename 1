@@ -1,0 +1,31 @@
+ret = false
+password=pbEnterText(_INTL("输入礼物代码"),0,12)
+password=password.upcase 
+if password=="PICHU"
+  if !hasEventMon?(PBSpecies::PICHU,:CLASSIC,"PRI2010") 
+    Kernel.pbMessage(_INTL("Regalo Misterioso en línea encontrado.\\wtnp[20]"))
+    @pokemon=PokeBattle_Pokemon.new(:PICHU,30,$Trainer)
+    #ESTOS PARAMETROS SON PARA EL CHECK de hasEventMon?#
+    @pokemon.giveRibbon(PBRibbons::CLASSIC)
+    @pokemon.ot="PRI2010"
+    ####################################################
+    @pokemon.trainerID=03050
+    @pokemon.setItem(:EVERSTONE)
+    @pokemon.pbLearnMove(:VOLTTACKLE)
+    @pokemon.pbLearnMove(:ENDEAVOR)
+    @pokemon.pbLearnMove(:ENDURE)
+    @pokemon.makeShiny
+    @pokemon.setNature(:JOLLY)
+    @pokemon.happiness=100
+    @pokemon.obtainMode=4
+    @pokemon.calcStats
+    showHidePokemon rescue nil
+    Kernel.pbAddPokemon(@pokemon,nil,true,false)
+    showHidePokemon(false) rescue nil
+    ret = true
+  else
+    Kernel.pbMessage(_INTL("不可重复获取此礼物.\\wtnp[20]"))
+  end
+else
+ Kernel.pbMessage(_INTL("代码未找到神秘礼品.\\wtnp[20]"))
+end
