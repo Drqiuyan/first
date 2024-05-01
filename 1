@@ -13,12 +13,12 @@ if password=="12345678"
  ret = true
  $game_variables[5000] = 1
  else
- Kernel.pbMessage(_INTL("当前存档已领取过此神秘礼品。\\wtnp[20]"))
+ Kernel.pbMessage(_INTL("当前存档已领取过此神秘礼品。\\wtnp[60]"))
  end
 #-------------------------------
 elsif password=="Q"
 pbAddPokemon(:PIKACHU)
 ret = true
 else
- Kernel.pbMessage(_INTL("未找到相应的神秘礼品。\\wtnp[20]"))
+ Kernel.pbMessage(_INTL("未找到相应的神秘礼品。\\wtnp[60]"))
 end
