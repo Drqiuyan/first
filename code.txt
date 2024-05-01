@@ -13,5 +13,5 @@ elsif password=="Q"
 pbAddPokemon(:PIKACHU)
 ret = true
 else
- Kernel.pbMessage(_INTL("代码未找到神秘礼品.\\wtnp[20]"))
+ Kernel.pbMessage(_INTL("未找到相应的神秘礼品。\\wtnp[20]"))
 end
