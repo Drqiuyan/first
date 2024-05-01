@@ -2,7 +2,7 @@ ret = false
 password=pbEnterText(_INTL("输入礼物代码"),0,12)
 password=password.upcase 
 if password=="12345678"
-pkmn = Pokemon.new(:PICHU, 5)
+pkmn = Pokemon.new(:PICHU, 1)
 pkmn.shiny = true
 pkmn.poke_ball = :STRANGEBALL
 pkmn.owner.name = "神秘礼物"
