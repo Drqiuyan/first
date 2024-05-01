@@ -1,8 +1,8 @@
 ret = false
 password=pbEnterText(_INTL("输入礼物代码"),0,12)
 password=password.upcase 
-if password=="PICHU"
-pbAddPokemon(@pokemon,nil,true,false)
+if password=="P"
+pbAddPokemon(:PICHU)
 ret = true
 else
  Kernel.pbMessage(_INTL("代码未找到神秘礼品.\\wtnp[20]"))
