@@ -1,8 +1,10 @@
+#password=pbEnterText(_INTL("输入礼物代码"),0,12)
+#password=password.upcase 
 ret = false
-password=pbEnterText(_INTL("输入礼物代码"),0,12)
-password=password.upcase 
+showBlocUnown
+Kernel.pbMessage(_INTL("你输入的代码是\\v[999]"))
 #-------------------------------
-if password=="12345678"
+if unownWord == "PICHU"
  if $game_variables[5000] == 0
  pkmn = Pokemon.new(:PICHU, 1)
  pkmn.shiny = true
@@ -16,9 +18,10 @@ if password=="12345678"
  Kernel.pbMessage(_INTL("当前存档已领取过此神秘礼品。\\wtnp[60]"))
  end
 #-------------------------------
-elsif password=="Q"
+elsif unownWord == "PIKACHU"
 pbAddPokemon(:PIKACHU)
 ret = true
+#-------------------------------
 else
  Kernel.pbMessage(_INTL("未找到相应的神秘礼品。\\wtnp[60]"))
 end
