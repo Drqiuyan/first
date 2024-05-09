@@ -1,5 +1,4 @@
 ret = false
-showBlocUnown
 Kernel.pbMessage(_INTL("你输入的代码是\\v[999]"))
 #-------------------------------
 if unownWord == "PICHU"
