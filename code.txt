@@ -1,4 +1,5 @@
 ret = false
+$game_variables[5000] =''
 showBlocUnown
  Kernel.pbMessage(_INTL("你输入的代码是 \v[5000]"))
  Kernel.pbMessage(_INTL("搜寻代码中……"))
